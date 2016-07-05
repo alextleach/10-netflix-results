@@ -16,22 +16,21 @@
     <div class="width-container">
     <div class="title-header">
       <div class="movie__title">
-        <h2>Attack on Titan</h2>
-        <p>Anime</p>
-        <span class="movie__title--rating">
-          4.6 <i class="fa fa-star" aria-hidden="true"></i>
-        </span>
+        <h2 class="movie__title__h2"></h2>
+        <h4 class="movie__title__genre"></h4>
+        <span class="movie__title--rating"></span>
+        <i class="fa fa-star" aria-hidden="true"></i>
       </div>
       <div class="movie__image">
-        <img src="https://cdn.thinglink.me/api/image/748548190021615616/1240/10/scaletowidth" alt="">
+      <img class="movie__image--img" src="" alt="" />
       </div>
     </div>
 
     <div class="movie__info">
       <h3>Summary</h3>
-      <p>Here is some information about the plot of the movie that is selected.</p>
+      <p class="movie__summary"></p>
       <h3>Actors</h3>
-      <p>Here is an extensive list of actors that appear in the movie you selected.</p>
+      <p class="movie__actors"></p>
 
     </div>
 
@@ -47,6 +46,9 @@
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
+  const netflixMovie = document.querySelector('.page');
+  var netflixResult = require ('netflix-result');
+  netflixResult (netflixMovie);
   </script>
 </body>
 </html>
