@@ -2,15 +2,56 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>10-netflix-results</title>
+  <title>10-Netflix-Results</title>
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
+
+<section class="page">
+  <div class="main-rectangle">
+    <div class="search-container">
+      <input class="search__text" type="text" placeholder="Movie Title" required>
+      <button class="search__button" type="button" name="button"><span class="search__button--text">Search</span></button>
+    </div>
+    <div class="width-container">
+    <div class="title-header">
+      <div class="movie__title">
+        <h2 class="movie__title__h2"></h2>
+        <h4 class="movie__title__genre"></h4>
+        <span class="movie__title--rating"></span>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+      <div class="movie__image">
+      <img class="movie__image--img" src="" alt="" />
+      </div>
+    </div>
+
+    <div class="movie__info">
+      <h3>Summary</h3>
+      <p class="movie__summary"></p>
+      <h3>Actors</h3>
+      <p class="movie__actors"></p>
+
+    </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
 
   <script src="/vendor.js" charset="utf-8"></script>
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
+  var netflixResult = require ('netflix-result');
+  var searchClick = require ('index');
+  const netflixMovie = document.querySelector('.page');
+  searchClick(netflixMovie);
+  netflixResult (netflixMovie, '30 Rock');
+  // searchClick ();
   </script>
 </body>
 </html>
