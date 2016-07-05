@@ -1,6 +1,6 @@
 export default function netflixResult(element,movieTitle) {
 
-  fetch ('http://netflixroulette.net/api/api.php?title=Attack%20on%20titan')
+  fetch (`http://netflixroulette.net/api/api.php?title=${movieTitle}`)
     .then((res) => res.json())
     .then((netflixData) => {
 
@@ -26,7 +26,7 @@ export default function netflixResult(element,movieTitle) {
 
   });
 
-  console.log(element);
+  // console.log(element);
 
 
 };

@@ -11,7 +11,7 @@
   <div class="main-rectangle">
     <div class="search-container">
       <input class="search__text" type="text" placeholder="Movie Title" required>
-      <div class="search__button"><span class="search__button--text">Search</span></div>
+      <button class="search__button" type="button" name="button"><span class="search__button--text">Search</span></button>
     </div>
     <div class="width-container">
     <div class="title-header">
@@ -46,9 +46,12 @@
   <script src="/app.js" charset="utf-8"></script>
 
   <script type="text/javascript">
-  const netflixMovie = document.querySelector('.page');
   var netflixResult = require ('netflix-result');
-  netflixResult (netflixMovie);
+  var searchClick = require ('index');
+  const netflixMovie = document.querySelector('.page');
+  searchClick(netflixMovie);
+  netflixResult (netflixMovie, '30 Rock');
+  // searchClick ();
   </script>
 </body>
 </html>
